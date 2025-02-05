@@ -1,6 +1,10 @@
 # Prerequisites
 *.d
 
+# Swap files
+*.swp
+*.swo
+
 # Compiled Object files
 *.slo
 *.lo
