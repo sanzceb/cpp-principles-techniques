@@ -22,20 +22,20 @@ compiler
 grouped together
 - **bug**: program behaviour that is different of what the programmer intended
 - `main()`: the name of the function to be executed in a C++ computer program
-- **C++**: An object-oriented programming language.
+- **C++**: An object-oriented programming language
 - **IDE**: Stands for *Integrated Development Environment*. It is a computer
 program with a set of tools designed to facilitate writing, compiling
-and executing computer programs.
-- **source code**:
-- **statement**: an action within a program.
-- **#include**:
-- **debugging**: the process of finding and removing *bugs*.
+and executing computer programs
+- **source code**: A program written in a human readable programming language
+- **statement**: an action within a program
+- **#include**: a preprocessing instruction to refer to a *header file*
+- **debugging**: the process of finding and removing *bugs*
 - **<<**: the C++ operator 'push to'
 - **header file**: a file that contains type and function definitions that help
 to include
-- **program**: a set of statements that can be executed by a computer.
+- **program**: a set of statements that can be executed by a computer
 - **compile-time**: The time when the compiler translates source code into
 object code
-- `cout`: an abbreviation of the standard output stream.
+- `cout`: an abbreviation of the standard output stream
 - `std`: an abbreviation of the C++ Standard Library
 
