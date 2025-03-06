@@ -1,21 +1,14 @@
-// Determines the smaller, larger, sum, difference and product of two values
+/**
+ * This program declares a number of variables
+ * with legal and illegal names to study how
+ * the compiler reacts
+ */
 
-#include "../../PPPheaders.h"
-
-int main()
+int main ()
 {
-      cout << "Enter two integer values: ";
-      int val1;
-      int val2;
-      cin >> val1 >> val2;
-
-      if (val1 < val2)
-	    cout << "The first value is smaller";
-      else if (val2 < val1)
-	    cout << "The second value is smaller";
-      cout << "\nThe sum is: " << val1+val2
-	    << "\nThe difference is: " << val1 - val2
-	    << "\nThe product is: " << val1 * val2
-	    << '\n';
+      int double = 0; // illegal
+      double This_little_pig; // legal
+      int 2_for_1_special; // illegal
+      char $PATH; //legal
+      char correct?; // Illegal
 }
-
