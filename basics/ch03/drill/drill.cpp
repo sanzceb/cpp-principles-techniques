@@ -1,35 +1,26 @@
-// A program that consists of a while-loop that reads two doubles each time
-// then prints which is the smaller and which is the larger value if the
-// difference is above the threshold. Otherwise, it prints that both numbers
-// are equal
+// A program that reads a sequence of doubles and keeps track of the
+// biggest and the smallest value at any given time
 
 #include "../PPPheaders.h"
 
 int main()
 {
-      cout << "Enter a sequence of numbers in pairs and then enter \"|\": ";
-      int i = 0;
+      double min; // Keep track of the smallest value
+      double max; // Keep track of the biggest value at each time
       double temp;
-      double prev; // the previous number
-      while (cin >> temp) {
-	    if (i % 2) // is temp the second value?
-		  if (temp < prev)
-			if (prev - temp < 1.0/100)
-			      cout << "The numbers are almost equal" << '\n';
-			else
-			      cout << "The smaller value is: " << temp << '\n'
-				    << "The larger value is: " << prev << '\n';
-		  else if (temp > prev)
-			if (temp - prev < 1.0/100)
-			      cout << "The numbers are almost equal" << '\n';
-			else
-			      cout << "The smaller value is: " << prev << '\n'
-				    << "The larger value is: " << temp << '\n';
-		  else
-			cout << "The numbers are equal\n";
-			
-	    else
-		  prev = temp;
-	    ++i;
-      }
+      cout << "Enter a sequence of numbers in pairs and then enter \"|\": ";
+      cin >> temp; // The first number is always the biggest
+      cout << temp << " the biggest so far" << '\n'; 
+      min = temp;
+      max = temp; 
+      while (cin >> temp) 
+	    if (temp < min) {
+		  min = temp;
+		  cout << temp << " the smallest so far" << '\n';
+	    } else if (temp > max) {
+		  max = temp;
+		  cout << temp << " the biggest so far" << '\n';
+	    } else
+		  cout << temp << '\n';
 }
+
