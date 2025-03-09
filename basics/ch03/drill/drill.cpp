@@ -27,19 +27,28 @@ int main()
 
       double min_m = value_as_m(temp, unit); // track the smallest value
       double max_m = min_m; // track the biggest value
+      double sum = min_m;
       while (cin >> temp >> unit) {
 	    double temp_m = value_as_m(temp, unit);
-	    if (temp_m == -1) {
+	    if (temp_m == -1) 
 		  cout << "Sorry, I do not know a unit called "
 			<< unit << '\n';
-	    } else if (temp_m < min_m) {
-		  min_m = temp_m;
-		  cout << temp << unit << " the smallest so far" << '\n';
-	    } else if (temp_m > max_m) {
-		  max_m = temp_m;
-		  cout << temp << unit << " the biggest so far" << '\n';
-	    } else
-		  cout << temp << unit << '\n';
+	    else {
+		  sum += temp_m;
+		  if (temp_m < min_m) {
+			min_m = temp_m;
+			cout << temp << unit << " the smallest so far" << '\n';
+		  } else if (temp_m > max_m) {
+			max_m = temp_m;
+			cout << temp << unit << " the biggest so far" << '\n';
+		  } else {
+			cout << temp << unit << '\n';
+		  }
+	    }
       }
+
+      cout << '\n' << "The biggest number is: " <<  max_m << "m\n";
+      cout << "The smallest number is: " <<  min_m << "m\n";
+      cout << "The sum of the values is: " << sum << "m\n";
 }
 
